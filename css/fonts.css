@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'HelveticaBoldOblique_22454';
+    src: url('../images/fonts/HelveticaBoldOblique_22454.eot');
+    src: url('../images/fonts/HelveticaBoldOblique_22454.eot') format('embedded-opentype'),
+         url('../images/fonts/HelveticaBoldOblique_22454.woff2') format('woff2'),
+         url('../images/fonts/HelveticaBoldOblique_22454.woff') format('woff'),
+         url('../images/fonts/HelveticaBoldOblique_22454.ttf') format('truetype'),
+         url('../images/fonts/HelveticaBoldOblique_22454.svg#HelveticaBoldOblique_22454') format('svg');
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'HelveticaBoldFont';
+    src: url('../images/fonts/HelveticaBoldFont.eot');
+    src: url('../images/fonts/HelveticaBoldFont.eot') format('embedded-opentype'),
+         url('../images/fonts/HelveticaBoldFont.woff2') format('woff2'),
+         url('../images/fonts/HelveticaBoldFont.woff') format('woff'),
+         url('../images/fonts/HelveticaBoldFont.ttf') format('truetype'),
+         url('../images/fonts/HelveticaBoldFont.svg#HelveticaBoldFont') format('svg');
+         font-display: block;
+}

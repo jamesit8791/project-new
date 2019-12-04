@@ -1,0 +1,121 @@
+.page-preloader-cover {
+  position: fixed;
+  z-index: 1200;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  
+}
+.page-preloader-cover:after{
+  position: absolute;
+  width: 50%;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  background: #fff;
+  content: '';
+  z-index: 0;
+  transition: all 0.3s;
+}
+.page-preloader-cover:before{
+  position: absolute;
+  width: 50%;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background: #fff;
+  content: '';
+  z-index: 0;
+  transition: all 0.3s;
+}
+.page-preloader-cover.hidden:after{
+  width: 0;
+}
+.page-preloader-cover.hidden:before{
+  width: 0;
+}
+.preloader-inner{
+  transition: all 0.3s;
+}
+.preloader-inner.opacity{
+  opacity: 0;
+}
+.preloader-image-wrap{
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.page-preloader-cover .preloader-image-wrap+.bar {
+  margin-top: 20px
+}
+
+.page-preloader-cover .bar {
+  position: relative;
+  width: 300px;
+  height: 2px;
+  background-color: #f7f7f7;
+  overflow: hidden;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.page-preloader-cover .bar:before {
+  content: '';
+  width: 80px;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-animation: moving 2s infinite;
+  animation: moving 2s infinite;
+  border-radius: 10px;
+  background: #D90;
+}
+
+@-webkit-keyframes moving {
+  0%,
+  100% {
+    -webkit-transform: translate(-40px, 0);
+    transform: translate(-40px, 0)
+  }
+
+  50% {
+    -webkit-transform: translate(260px, 0);
+    transform: translate(260px, 0)
+  }
+
+}
+
+@keyframes moving {
+  0%,
+  100% {
+    -webkit-transform: translate(-40px, 0);
+    transform: translate(-40px, 0)
+  }
+
+  50% {
+    -webkit-transform: translate(260px, 0);
+    transform: translate(260px, 0)
+  }
+
+}
+
+@media screen and  (max-width:480px) {
+  
+}
