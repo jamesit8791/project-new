@@ -5,12 +5,12 @@
 		die("Bạn Không có quyền vào đây !");
 	}else{
 		if (isset($_POST["level"])) {
-			$level = $_POST["level"];
-			$id=$_POST["id"];
-			$type = $_POST["type"];
+			$level = htmlspecialchars($_POST["level"]);
+			$id= htmlspecialchars($_POST["id"]);
+			$type = htmlspecialchars($_POST["type"]);
 			switch ($level) {
 				case '0':{
-					echo $sql="select * from table_product_cat where id_list=".$id." and type='".$type."'  order by stt ";
+					$sql="select * from table_product_cat where id_list=".$id." and type='".$type."'  order by stt ";
 					$stmt=mysql_query($sql);
 					$str='
 						<option value="">Chọn danh mục cấp 2</option>			
@@ -35,7 +35,7 @@
 						';
 					while ($row=@mysql_fetch_array($stmt)) 
 					{
-						if($row["id"]==(int)@$_REQUEST["id_cat"])
+						if($row["id"]==(int)@htmlspecialchars($_REQUEST["id_cat"]))
 							$selected="selected";
 						else 
 							$selected="";
@@ -52,7 +52,7 @@
 						';
 					while ($row=@mysql_fetch_array($stmt)) 
 					{
-						if($row["id"]==(int)@$_REQUEST["id_cat"])
+						if($row["id"]==(int)@htmlspecialchars($_REQUEST["id_cat"]))
 							$selected="selected";
 						else 
 							$selected="";
