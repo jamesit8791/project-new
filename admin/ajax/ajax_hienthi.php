@@ -5,7 +5,12 @@
 		die("Bạn Không có quyền vào đây !");
 	}else{
 		if(isset($_POST["id"])){
-			$sql = "update ".(string)$_POST["bang"]." SET ".(string)$_POST["type"]."=".(string)$_POST["value"]." WHERE  id = ".(int)$_POST["id"]."";
+
+			$table = htmlspecialchars($_POST["bang"]);
+			$value = htmlspecialchars($_POST["value"]);
+			$id = htmlspecialchars($_POST["id"]);
+
+			$sql = "update ".." SET ".$table."=".$value." WHERE  id = ".$id."";
 			$data = mysql_query($sql) or die("Not query sql");
 		}
 	}
